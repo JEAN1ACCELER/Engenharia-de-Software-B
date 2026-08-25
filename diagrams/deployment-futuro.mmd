@@ -1,0 +1,25 @@
+flowchart TB
+    Client[Cliente Flutter/Web]
+    CDN[CDN e WAF]
+    API[API REST<br/>OpenAPI 3.0]
+    IdP[Provedor de identidade<br/>OAuth 2.0 / OIDC]
+    App[Serviços de aplicação<br/>Repository + DTO + Mapper]
+    DB[(PostgreSQL Multi-AZ)]
+    Read[(Réplica de leitura)]
+    Queue[Broker de eventos]
+    Notify[Serviço de notificações]
+    Backup[(Backup criptografado)]
+    Client --> CDN --> API
+    API --> IdP
+    API --> App
+    App --> DB
+    App --> Read
+    App --> Queue --> Notify
+    DB --> Backup
+
+    classDef edge fill:#e8f1ff,stroke:#2b5fab,color:#102a43
+    classDef app fill:#eaf7ee,stroke:#2f855a,color:#153e2e
+    classDef data fill:#fff4e5,stroke:#c05621,color:#431407
+    class Client,CDN,API,IdP edge
+    class App,Queue,Notify app
+    class DB,Read,Backup data

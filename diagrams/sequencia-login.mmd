@@ -1,0 +1,32 @@
+sequenceDiagram
+    actor U as Usuário
+    participant UI as LoginScreen
+    participant A as AuthService
+    participant R as UserRepository
+    participant DB as SQLite
+    U->>UI: Informa e-mail e senha
+    UI->>A: login(credentials)
+    A->>R: findByEmail(email)
+    loop Retry limitado em falha transitória
+        R->>DB: SELECT parametrizado
+        DB-->>R: Registro ou erro
+    end
+    alt Usuário não encontrado
+        R-->>A: NotFound
+        A-->>UI: Resultado seguro de falha
+        UI-->>U: Mensagem genérica
+    else Usuário encontrado
+        A->>A: Comparar derivado da senha
+        alt Senha válida
+            A->>A: Criar sessão
+            A-->>UI: UserResponseDTO sem credencial
+            UI-->>U: Navegar ao dashboard
+        else Senha inválida
+            A-->>UI: Falha sem revelar campo
+            UI-->>U: Solicitar nova tentativa
+        end
+    else Banco indisponível
+        R-->>A: Timeout/erro
+        A-->>UI: Serviço indisponível
+        UI-->>U: Tentar novamente mais tarde
+    end
