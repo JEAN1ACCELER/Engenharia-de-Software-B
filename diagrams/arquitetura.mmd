@@ -1,0 +1,17 @@
+flowchart TD
+    U[Usuário] --> UI[Camada de apresentação<br/>Flutter Screens e Widgets]
+    UI --> P[Provider / estado observável]
+    P --> A[AuthService]
+    P --> D[DatabaseService]
+    A --> M[Modelos: User, Project, Task]
+    D --> M
+    D --> SQL[(SQLite local)]
+    A --> SQL
+    SQL --> T[(users, passwords, projects, tasks)]
+
+    classDef ui fill:#e8f1ff,stroke:#2b5fab,color:#102a43
+    classDef service fill:#eaf7ee,stroke:#2f855a,color:#153e2e
+    classDef data fill:#fff4e5,stroke:#c05621,color:#431407
+    class UI,P ui
+    class A,D,M service
+    class SQL,T data

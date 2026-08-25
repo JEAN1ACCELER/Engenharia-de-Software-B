@@ -1,0 +1,33 @@
+flowchart LR
+    Visitante[Visitante] --> UC1[UC-01 Cadastrar]
+    Cadastrado[Usuário cadastrado] --> UC2[UC-02 Autenticar]
+    Autenticado[Usuário autenticado] --> UC3[UC-03 Dashboard]
+    Autenticado --> UC4[UC-04 Projetos]
+    Autenticado --> UC5[UC-05 Tarefas]
+    Autenticado --> UC6[UC-06 Perfil]
+    Autenticado --> UC7[UC-07 Preferências]
+    Autenticado --> UC8[UC-08 Logout]
+    UC1 --> Signup[SignupScreen]
+    UC2 --> Login[LoginScreen]
+    UC3 --> Dashboard[DashboardScreen]
+    UC4 --> Projects[ProjectsScreen]
+    UC5 --> Tasks[TasksScreen]
+    UC6 --> Profile[ProfileScreen]
+    UC7 --> Settings[SettingsScreen]
+    UC8 --> Auth[AuthService]
+    Signup --> Auth
+    Login --> Auth
+    Projects --> DB[DatabaseService]
+    Tasks --> DB
+    Dashboard --> DB
+    DB --> SQLite[(SQLite)]
+    Auth --> SQLite
+
+    classDef actor fill:#f5f5f5,stroke:#555,color:#111
+    classDef usecase fill:#e8f1ff,stroke:#2b5fab,color:#102a43
+    classDef component fill:#eaf7ee,stroke:#2f855a,color:#153e2e
+    classDef data fill:#fff4e5,stroke:#c05621,color:#431407
+    class Visitante,Cadastrado,Autenticado actor
+    class UC1,UC2,UC3,UC4,UC5,UC6,UC7,UC8 usecase
+    class Signup,Login,Dashboard,Projects,Tasks,Profile,Settings,Auth,DB component
+    class SQLite data
