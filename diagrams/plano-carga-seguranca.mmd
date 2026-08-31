@@ -1,0 +1,31 @@
+flowchart LR
+    A[Dados sintéticos] --> B[Gerador de carga<br/>k6]
+    B --> C[CDN / WAF]
+    C --> D[API REST]
+    D --> E[Identidade]
+    D --> F[Serviços de aplicação]
+    F --> G[(PostgreSQL)]
+    F --> H[Broker de eventos]
+    H --> I[Notificações]
+    G --> J[Backup / Restauração]
+    D --> K[Telemetria]
+    G --> K
+    H --> K
+    K --> L[Thresholds e decisão de release]
+
+    M[OWASP WSTG] --> N[Casos de segurança]
+    O[OWASP ASVS] --> N
+    N --> C
+    N --> D
+    N --> E
+    N --> F
+    N --> G
+
+    classDef source fill:#e9efff,stroke:#3157d5,color:#18285e
+    classDef system fill:#eaf9fb,stroke:#0e8f9b,color:#124c53
+    classDef data fill:#fff1dc,stroke:#c77c16,color:#553007
+    classDef security fill:#ffe7e7,stroke:#bd3d3d,color:#6b2020
+    class A,B,L source
+    class C,D,E,F,H,I,K system
+    class G,J data
+    class M,O,N security

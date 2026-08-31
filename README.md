@@ -40,6 +40,7 @@ Os itens acima distinguem **o que foi implementado no material de referência** 
 | [`docs/especificacao-completa.md`](docs/especificacao-completa.md) | Estrutura solicitada: introdução, requisitos gerais e UML completa | Cliente, PO, desenvolvimento e QA |
 | [`docs/index.html`](docs/index.html) | Versão visual, navegável e responsiva da especificação | Todos os públicos do projeto |
 | [`docs/galeria-diagramas.html`](docs/galeria-diagramas.html) | Galeria com imagem, finalidade, leitura, componentes e requisitos de cada diagrama | Produto, arquitetura, QA e desenvolvimento |
+| [`docs/qualidade-e-testes.html`](docs/qualidade-e-testes.html) | Painel visual de testes unitários, integração, carga, segurança e referências | QA, desenvolvimento, arquitetura e DevOps |
 | [`diagrams/arquitetura.mmd`](diagrams/arquitetura.mmd) | Visão visual da arquitetura do MVP | Equipe técnica |
 | [`diagrams/rastreabilidade.mmd`](diagrams/rastreabilidade.mmd) | Relação entre atores, casos de uso e módulos | Equipe técnica e QA |
 | [`diagrams/casos-de-uso.mmd`](diagrams/casos-de-uso.mmd) | Casos de uso com relações include e extend | Produto, desenvolvimento e QA |
@@ -47,6 +48,7 @@ Os itens acima distinguem **o que foi implementado no material de referência** 
 | [`diagrams/deployment-futuro.mmd`](diagrams/deployment-futuro.mmd) | Arquitetura de implantação candidata para evolução remota | Arquitetura e infraestrutura |
 | [`diagrams/atividades-autenticacao.mmd`](diagrams/atividades-autenticacao.mmd) | Diagrama de atividades com raias de responsabilidade | Desenvolvimento e QA |
 | [`diagrams/classes-dominio.mmd`](diagrams/classes-dominio.mmd) | Diagrama de classes com entidades, serviços e DTO | Arquitetura e desenvolvimento |
+| [`diagrams/plano-carga-seguranca.mmd`](diagrams/plano-carga-seguranca.mmd) | Fluxo visual do plano de carga, segurança, telemetria e release | QA, segurança e DevOps |
 
 ## Escopo do MVP
 

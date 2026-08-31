@@ -11,6 +11,7 @@ Esta pasta contém as versões PNG dos diagramas Mermaid mantidos na pasta [`/di
 | `classes-dominio.png` | `diagrams/classes-dominio.mmd` | Estática | Entidades, serviços, DTO e multiplicidades. | Atual |
 | `rastreabilidade.png` | `diagrams/rastreabilidade.mmd` | Governança | Caminho entre atores, casos de uso, componentes e dados. | Atual |
 | `deployment-futuro.png` | `diagrams/deployment-futuro.mmd` | Implantação | Arquitetura candidata para evolução remota. | Futuro, não implementado |
+| `plano-carga-seguranca.png` | `diagrams/plano-carga-seguranca.mmd` | Qualidade e segurança | Fluxo de dados sintéticos, k6, WAF, API, telemetria e gate de release. | Futuro, não implementado |
 
 ## Critério de documentação
 
