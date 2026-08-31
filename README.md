@@ -33,11 +33,14 @@ Os itens acima distinguem **o que foi implementado no material de referência** 
 | [`docs/05-rastreabilidade-e-riscos.md`](docs/05-rastreabilidade-e-riscos.md) | Matriz RTM, riscos, mitigação e lições aprendidas | Gerência, PO, QA e arquitetura |
 | [`docs/06-operacao-e-governanca.md`](docs/06-operacao-e-governanca.md) | Segurança, acessibilidade, versionamento, releases e operação | Dev, QA, DevOps e mantenedores |
 | [`docs/07-complemento-profissional.md`](docs/07-complemento-profissional.md) | Ficha técnica, cadeia de custódia, padrões, jornada UX, atas e requisitos condicionais | Gestão, arquitetura e avaliação técnica |
+| [`docs/especificacao-completa.md`](docs/especificacao-completa.md) | Estrutura solicitada: introdução, requisitos gerais e UML completa | Cliente, PO, desenvolvimento e QA |
 | [`diagrams/arquitetura.mmd`](diagrams/arquitetura.mmd) | Visão visual da arquitetura do MVP | Equipe técnica |
 | [`diagrams/rastreabilidade.mmd`](diagrams/rastreabilidade.mmd) | Relação entre atores, casos de uso e módulos | Equipe técnica e QA |
 | [`diagrams/casos-de-uso.mmd`](diagrams/casos-de-uso.mmd) | Casos de uso com relações include e extend | Produto, desenvolvimento e QA |
 | [`diagrams/sequencia-login.mmd`](diagrams/sequencia-login.mmd) | Sequência de autenticação com alt e retry | Desenvolvimento e QA |
 | [`diagrams/deployment-futuro.mmd`](diagrams/deployment-futuro.mmd) | Arquitetura de implantação candidata para evolução remota | Arquitetura e infraestrutura |
+| [`diagrams/atividades-autenticacao.mmd`](diagrams/atividades-autenticacao.mmd) | Diagrama de atividades com raias de responsabilidade | Desenvolvimento e QA |
+| [`diagrams/classes-dominio.mmd`](diagrams/classes-dominio.mmd) | Diagrama de classes com entidades, serviços e DTO | Arquitetura e desenvolvimento |
 
 ## Escopo do MVP
 

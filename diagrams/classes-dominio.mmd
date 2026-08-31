@@ -1,0 +1,56 @@
+classDiagram
+    class User {
+        +int id
+        +String name
+        +String email
+        +String cpf
+        +String cns
+        +String role
+        +DateTime createdAt
+        +bool acceptedTerms
+        +bool acceptedPrivacy
+    }
+    class Project {
+        +int id
+        +int userId
+        +String title
+        +String description
+        +String status
+        +DateTime createdAt
+    }
+    class Task {
+        +int id
+        +int projectId
+        +String title
+        +String description
+        +String status
+        +DateTime dueDate
+        +DateTime createdAt
+    }
+    class AuthService {
+        +User currentUser
+        +login(email, password)
+        +signup(data)
+        +logout()
+    }
+    class DatabaseService {
+        +getUserByEmail(email)
+        +insertUser(user)
+        +insertProject(project)
+        +insertTask(task)
+        +getProjectsByUser(userId)
+        +getTasksByProject(projectId)
+    }
+    class UserResponseDTO {
+        +int id
+        +String name
+        +String email
+        +String role
+    }
+    User "1" --> "0..*" Project : possui
+    Project "1" --> "0..*" Task : contém
+    AuthService --> DatabaseService : utiliza
+    DatabaseService --> User : persiste
+    DatabaseService --> Project : persiste
+    DatabaseService --> Task : persiste
+    AuthService --> UserResponseDTO : retorna

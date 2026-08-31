@@ -1,0 +1,27 @@
+flowchart TD
+    subgraph U[Usuário]
+        U1([Iniciar login])
+        U2[Informar e-mail e senha]
+        U3([Visualizar resultado])
+    end
+    subgraph F[Front-end / LoginScreen]
+        F1[Validar campos]
+        F2[Enviar credenciais ao AuthService]
+        F3[Exibir erro ou navegar ao dashboard]
+    end
+    subgraph S[Back-end / Serviço de aplicação]
+        S1[Consultar usuário]
+        S2[Comparar derivado da senha]
+        S3[Criar sessão segura]
+    end
+    subgraph D[Banco de Dados / SQLite]
+        D1[Executar consulta parametrizada]
+        D2[Retornar usuário ou erro]
+    end
+    U1 --> U2 --> F1
+    F1 -->|Inválido| F3 --> U3
+    F1 -->|Válido| F2 --> S1 --> D1 --> D2
+    D2 -->|Erro| F3
+    D2 -->|Usuário encontrado| S2
+    S2 -->|Senha inválida| F3
+    S2 -->|Senha válida| S3 --> F3 --> U3
