@@ -1,5 +1,9 @@
 # Engenharia de Software B — E-Project
 
+## Versão visual
+
+A documentação detalhada também está disponível em uma versão HTML responsiva e navegável: **[abrir especificação visual](docs/index.html)**. Ela inclui menu lateral, cartões de indicadores, tabelas, diagramas UML renderizados, navegação por âncoras e adaptação para telas menores.
+
 ## Visão executiva
 
 Este repositório consolida a especificação, a arquitetura, a qualidade e a governança do **E-Project**, um MVP de gerenciamento pessoal de projetos e tarefas. O sistema foi documentado a partir do material acadêmico e técnico do projeto de referência `projeto_pratico-eg`, sem modificar o repositório de origem. O resultado organiza o conteúdo em uma baseline profissional, com rastreabilidade entre necessidades, requisitos, histórias, componentes, testes e riscos.
@@ -34,6 +38,7 @@ Os itens acima distinguem **o que foi implementado no material de referência** 
 | [`docs/06-operacao-e-governanca.md`](docs/06-operacao-e-governanca.md) | Segurança, acessibilidade, versionamento, releases e operação | Dev, QA, DevOps e mantenedores |
 | [`docs/07-complemento-profissional.md`](docs/07-complemento-profissional.md) | Ficha técnica, cadeia de custódia, padrões, jornada UX, atas e requisitos condicionais | Gestão, arquitetura e avaliação técnica |
 | [`docs/especificacao-completa.md`](docs/especificacao-completa.md) | Estrutura solicitada: introdução, requisitos gerais e UML completa | Cliente, PO, desenvolvimento e QA |
+| [`docs/index.html`](docs/index.html) | Versão visual, navegável e responsiva da especificação | Todos os públicos do projeto |
 | [`diagrams/arquitetura.mmd`](diagrams/arquitetura.mmd) | Visão visual da arquitetura do MVP | Equipe técnica |
 | [`diagrams/rastreabilidade.mmd`](diagrams/rastreabilidade.mmd) | Relação entre atores, casos de uso e módulos | Equipe técnica e QA |
 | [`diagrams/casos-de-uso.mmd`](diagrams/casos-de-uso.mmd) | Casos de uso com relações include e extend | Produto, desenvolvimento e QA |
