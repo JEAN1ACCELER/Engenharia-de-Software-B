@@ -118,6 +118,7 @@ export const options = {
 };
 ```
 
+
 O trecho é um ponto de partida e não substitui a definição de URLs, autenticação de teste, dados, teardown, correlação de tokens, tags, métricas de negócio e limites aprovados.
 
 ## 6. Entregáveis
